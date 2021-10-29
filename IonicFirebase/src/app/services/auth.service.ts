@@ -58,16 +58,18 @@ export class AuthService {
       this.afauth.signInWithEmailAndPassword(email, passd)
       .then((data)=>
       {
-        if(!data.user.emailVerified)
-        {
-          loading.dismiss();
-          this.toast('please verify your mail', 'success');
-          this.afauth.signOut();
-        }else
-        {
-          loading.dismiss();
+        loading.dismiss();
           this.router.navigateByUrl('home');
-        }
+        // if(!data.user.emailVerified)
+        // {
+        //   loading.dismiss();
+        //   this.toast('please verify your mail', 'success');
+        //   this.afauth.signOut();
+        // }else
+        // {
+        //   loading.dismiss();
+        //   this.router.navigateByUrl('home');
+        // }
       })
       .catch(error => {
         loading.dismiss();

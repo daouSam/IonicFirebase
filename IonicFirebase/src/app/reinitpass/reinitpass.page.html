@@ -9,16 +9,16 @@
     <form>
       <ion-list>
         <ion-label>Acien mot de passe</ion-label>
-        <ion-input type="password" name="passd"></ion-input>
+        <ion-input type="password" [(ngModel)]="passd1" name="passd1" ></ion-input>
       </ion-list>
       <p>Veillez saisir le nouveau mot de passe</p>
       <ion-list>
         <ion-label>nouveau mot de passe</ion-label>
-        <ion-input type="password" name="passdN"></ion-input>
+        <ion-input type="password"  [(ngModel)]="passdN" name="passdN"></ion-input>
       </ion-list>
       <ion-list>
         <ion-label>confirmer mot de passe</ion-label>
-        <ion-input type="password" name="passdC"></ion-input>
+        <ion-input type="password"  [(ngModel)]="passdC" name="passdC"></ion-input>
       </ion-list>
       <ion-button expand="full" type="submit" color="primary" (click)="updatepassd()">Enregistrer</ion-button>
     </form>
