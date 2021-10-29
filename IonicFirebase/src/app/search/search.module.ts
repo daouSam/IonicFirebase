@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
+
+import { IonicModule } from '@ionic/angular';
+
+import { SearchPageRoutingModule } from './search-routing.module';
+
+import { SearchPage } from './search.page';
+import { filter } from 'rxjs/operators';
+import { from } from 'rxjs';
+
+@NgModule({
+  imports: [
+    Ng2SearchPipeModule,
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    SearchPageRoutingModule
+  ],
+  declarations: [SearchPage]
+})
+export class SearchPageModule {}

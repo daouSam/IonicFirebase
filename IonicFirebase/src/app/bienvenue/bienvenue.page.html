@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenue</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <ion-card>
+    <ion-card-header>
+      <ion-img src="../../assets/icon/bienvenue.jpg"></ion-img>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-button [routerLink]="['/register']" expand="block" color="primary">Register</ion-button>
+
+          <p class="divider line one-line" style="text-align:center;">OU</p>
+
+          <ion-button [routerLink]="['/login']" expand="block" color="danger">LogIn</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

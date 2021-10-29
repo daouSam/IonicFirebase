@@ -1,0 +1,29 @@
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Home Page</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-button routerLink="/profile" expand="full">Profile</ion-button>
+            <ion-button routerLink="/search" expand="full">Recherche</ion-button>
+          </ion-item>
+        </ion-list>
+
+
+
+      <ion-item color="tertiary">
+        <ion-label color="secondary" expand="full">La liste des utilisateurs</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nom</ion-label>
+        <ion-label>Prenom</ion-label>
+        <ion-label>Téléphone</ion-label>
+      </ion-item>
+      <ion-item *ngFor="let item of items | async">
+        <ion-label>{{item.utilisateurNom}}</ion-label>
+        <ion-label>{{item.utilisateurPrenom}}</ion-label>
+        <ion-label>{{item.utilisateurPhone}}</ion-label>
+      </ion-item>
+    </ion-content>

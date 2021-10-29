@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Page de Recherche</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar [(ngModel)]="term" placeholder=""></ion-searchbar>
+
+  <ion-list lines="none">
+    <ion-item *ngFor="let item of items | async | filter: term">
+      <ion-label class="ion-text-wrap">
+        <ion-text color="primary">
+          <ion-label>{{ item.utilisateurNom }}  {{ item.utilisateurPrenom }}</ion-label>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

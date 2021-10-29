@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Changer mot de passe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form>
+      <ion-list>
+        <ion-label>Acien mot de passe</ion-label>
+        <ion-input type="password" name="passd"></ion-input>
+      </ion-list>
+      <p>Veillez saisir le nouveau mot de passe</p>
+      <ion-list>
+        <ion-label>nouveau mot de passe</ion-label>
+        <ion-input type="password" name="passdN"></ion-input>
+      </ion-list>
+      <ion-list>
+        <ion-label>confirmer mot de passe</ion-label>
+        <ion-input type="password" name="passdC"></ion-input>
+      </ion-list>
+      <ion-button expand="full" type="submit" color="primary" (click)="updatepassd()">Enregistrer</ion-button>
+    </form>
+  </ion-card>
+</ion-content>

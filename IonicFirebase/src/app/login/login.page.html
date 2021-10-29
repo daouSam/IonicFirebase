@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar style="background-color: cornflowerblue;">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-img src="../../assets/icon/imageionic.png"></ion-img>
+  </ion-card-header>
+  <ion-card-content>
+
+  </ion-card-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">email</ion-label>
+      <ion-input type="email" required [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">mot de passe</ion-label>
+      <ion-input type="password" required [(ngModel)]="passd" name="passd"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block" (click)="login()">Se Connecter</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <div style="text-align: center;">
+    <p>Don't have account? Register <a [routerLink]="['/register']">ici !</a></p>
+    <a [routerLink]="['/passoublie']" class="small-text">Forgot Password?</a>
+  </div>
+</ion-card>
+
+</ion-content>

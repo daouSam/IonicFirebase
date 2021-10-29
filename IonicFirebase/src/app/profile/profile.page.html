@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Bienvenue Dans votre profile</ion-label>
+      </ion-item>
+      <ion-item>
+        <p>{{user?.utilisateurNom}}</p>
+      </ion-item>
+      <ion-item>
+        <p>{{user?.utilisateurPrenom}}</p>
+      </ion-item>
+      <ion-item>
+        <p>{{user?.utilisateurEmail}}</p>
+      </ion-item>
+      <ion-item>
+        <p>{{user?.utilisateurPhone}}</p>
+      </ion-item>
+      <ion-item>
+        <p>{{user?.dateCreation | date}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-button color="primary"  routerLink="/reinitpass" expand="full">Editer mot de passe !</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button color="success" (click)="logout()">Déconnexion</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

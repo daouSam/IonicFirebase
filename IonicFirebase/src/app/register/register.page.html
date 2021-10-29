@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registration
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <form>
+      <ion-item>
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input type="text" required [(ngModel)]="nom" name="nom"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Prenom</ion-label>
+        <ion-input type="text" required [(ngModel)]="prenom" name="prenom"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" required [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Phone</ion-label>
+        <ion-input type="tel" required [(ngModel)]="phone" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Mot de passe</ion-label>
+        <ion-input type="password" required [(ngModel)]="passd" name="passd"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block" (click)="register()">Enregistrer</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card>
+</ion-content>
